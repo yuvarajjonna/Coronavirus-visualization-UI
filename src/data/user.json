@@ -1,0 +1,235 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "firstName": "yuvaraj",
+      "lastName": "jonna",
+      "userName": "yjonna",
+      "email": "yuvraj1705@gmail.com",
+      "gender": "male",
+      "status": "Paid",
+      "role": "Member",
+      "password": "Yuva@1705"
+    },
+    {
+      "firstName": "uooha",
+      "lastName": "pothineni",
+      "userName": "oohaP",
+      "email": "we@we.we",
+      "gender": "female",
+      "role": "Guest",
+      "status": "Free",
+      "password": "Ooha@1705",
+      "id": 2
+    },
+    {
+      "firstName": "appGen",
+      "lastName": "Dev",
+      "userName": "AppGenAdmin",
+      "email": "uv.researchlabs@gmail.com",
+      "password": "Appgen@1705",
+      "gender": "male",
+      "role": "Admin",
+      "status": "Paid",
+      "id": 3
+    },
+    {
+      "firstName": "qw",
+      "lastName": "qw",
+      "userName": "qw",
+      "email": "wqq@ew.wew",
+      "password": "RT#43rwewdwse",
+      "gender": "others",
+      "role": "Guest",
+      "status": "Free",
+      "id": 4
+    },
+    {
+      "firstName": "ewe",
+      "lastName": "wewe",
+      "userName": "wewe",
+      "email": "yuv@dd.dd",
+      "password": "YU$$34er",
+      "gender": "male",
+      "role": "Guest",
+      "status": "Free",
+      "id": 5
+    },
+    {
+      "firstName": "we",
+      "lastName": "we",
+      "userName": "wew",
+      "email": "yuv@dd.dd",
+      "password": "F$4r4r4r44",
+      "gender": "male",
+      "role": "Guest",
+      "status": "Free",
+      "id": 6
+    },
+    {
+      "firstName": "er",
+      "lastName": "er",
+      "userName": "wesssssssssssss",
+      "email": "yuv@dd.dd",
+      "password": "weER23@#",
+      "gender": "male",
+      "role": "Member",
+      "status": "Free",
+      "id": 7
+    },
+    {
+      "firstName": "we",
+      "lastName": "we",
+      "userName": "we123",
+      "email": "we@we.we",
+      "password": "weWE@#23we",
+      "gender": "male",
+      "role": "Member",
+      "status": "Free",
+      "id": 8
+    },
+    {
+      "firstName": "we",
+      "lastName": "wewwewew",
+      "userName": "we123456",
+      "email": "yuv@dd.dd",
+      "password": "weWE@23w",
+      "gender": "male",
+      "role": "Member",
+      "status": "Free",
+      "id": 9
+    },
+    {
+      "firstName": "qqqqqqqqq",
+      "lastName": "zzzz",
+      "userName": "zzz",
+      "email": "zz@zz.zz",
+      "password": "zzZZ@2323wewe",
+      "gender": "male",
+      "role": "Guest",
+      "status": "Free",
+      "id": 10
+    },
+    {
+      "firstName": "az",
+      "lastName": "az",
+      "userName": "za",
+      "email": "yuv@dd.dd",
+      "password": "zzAZ!@12",
+      "gender": "male",
+      "role": "Guest",
+      "status": "Free",
+      "id": 11
+    },
+    {
+      "firstName": "er",
+      "lastName": "er",
+      "userName": "ere",
+      "email": "zz@zz.zz",
+      "password": "dDer@323wee",
+      "gender": "male",
+      "role": "Member",
+      "status": "Free",
+      "id": 12
+    },
+    {
+      "firstName": "yuva",
+      "lastName": "jonna",
+      "userName": "uv170518",
+      "email": "yuvraj1705@gmail.com",
+      "password": "Yuva@1705",
+      "gender": "male",
+      "role": "Guest",
+      "status": "Free",
+      "id": 13
+    },
+    {
+      "firstName": "yuva",
+      "lastName": "jonna",
+      "userName": "uv1705",
+      "email": "yuvi@uv.uv",
+      "password": "Yuvi@12345",
+      "gender": "male",
+      "role": "Guest",
+      "status": "Free",
+      "id": 14
+    },
+    {
+      "firstName": "wewe",
+      "lastName": "ewewewewe",
+      "userName": "uv1705qwq",
+      "email": "wewe@sds.df",
+      "password": "Yuvi@1705",
+      "gender": "male",
+      "role": "Guest",
+      "status": "Free",
+      "id": 15
+    },
+    {
+      "firstName": "wewewe",
+      "lastName": "wewewewe",
+      "userName": "uv1705egggggggg",
+      "email": "y@dd.cd",
+      "password": "Yuvi@1705",
+      "gender": "male",
+      "role": "Member",
+      "status": "Free",
+      "id": 16
+    },
+    {
+      "firstName": "ty",
+      "lastName": "ty",
+      "userName": "eeeeeeeee",
+      "email": "ty@rt.er",
+      "password": "Yuva@1705",
+      "gender": "male",
+      "role": "Member",
+      "status": "Free",
+      "id": 17
+    },
+    {
+      "firstName": "wewe",
+      "lastName": "wewew",
+      "userName": "yjonnaweweweds",
+      "email": "sd@we.ere",
+      "password": "Yuva@1705",
+      "gender": "male",
+      "role": "Member",
+      "status": "Free",
+      "id": 18
+    },
+    {
+      "firstName": "we",
+      "lastName": "we",
+      "userName": "yjonnawewewsd",
+      "email": "sd@ee.fd",
+      "password": "Yuva@1705",
+      "gender": "male",
+      "role": "Member",
+      "status": "Free",
+      "id": 19
+    },
+    {
+      "firstName": "re",
+      "lastName": "er",
+      "userName": "yjonnaer",
+      "email": "er@er.er",
+      "password": "Yuva@1705",
+      "gender": "male",
+      "role": "Member",
+      "status": "Free",
+      "id": 20
+    },
+    {
+      "firstName": "we",
+      "lastName": "we",
+      "userName": "yjonwewena",
+      "email": "we@we.we",
+      "password": "Yuva@1705we",
+      "gender": "male",
+      "role": "Guest",
+      "status": "Free",
+      "id": 21
+    }
+  ]
+}
