@@ -13,7 +13,6 @@
               <h5>New Cases:  {{countryData.todayCases}}</h5>
               <h5>New Deaths:  {{countryData.todayDeaths}}</h5>
             </div>
-
           </div>
         </b-card>
       </b-col>
@@ -38,14 +37,17 @@
 </template>
 
 <script>
+/* eslint-disable */
 import axios from 'axios'
 import _ from 'lodash'
 import { CChartPie } from '@coreui/vue-chartjs'
+import { mapActions } from 'vuex'
 
 export default {
   name: 'Users',
   components: { CChartPie },
   created () {
+    this.setIsLoader(true)
     this.getCountryData(this.$route.params.countryName);
   },
   data () {
@@ -84,11 +86,16 @@ export default {
           this.defaultDatasets[0].data[2] = response.data.active
           this.chart2[0].data[0] = response.data.critical
           this.chart2[0].data[1] = response.data.active - response.data.critical
+          this.setIsLoader(false)
         })
         .catch(error => {
           console.log('error', error)
         })
-    }
+    },
+    ...mapActions([
+      'setUserDetails',
+      'setIsLoader'
+    ])
   }
 }
 </script>

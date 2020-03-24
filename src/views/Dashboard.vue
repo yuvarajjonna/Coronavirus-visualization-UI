@@ -35,12 +35,13 @@
       </b-col>
     </b-row>
     <b-row>
-      <b-col md="12">
-        <b-card header="Confirmed Cases and Deaths by Country, Territory, or Conveyance">
+      <b-col class="customCard" md="12">
+        <b-card header="Confirmed Cases and Deaths by Country (Click on country to see in detail)">
           <b-row>
-            <b-col sm="12" lg="12" style="overflow-y: scroll;">
-              <b-table hover
+            <b-col sm="12" lg="12" class="tableCard">
+              <b-table hover sticky-header
                 :items="items"
+                :fields="fields"
                 @row-clicked="myRowClickHandler"
               ></b-table>
             </b-col>
@@ -52,8 +53,10 @@
 </template>
 
 <script>
+/* eslint-disable */
 import axios from 'axios'
 import { Callout } from '@coreui/vue'
+import { mapActions } from 'vuex'
 
 export default {
   name: 'Dashboard',
@@ -65,12 +68,65 @@ export default {
       slide: 0,
       sliding: null,
       items: [],
+      fields: [
+          {
+            key: 'country',
+            label: 'Country',
+            sortable: true
+          },
+          {
+            key: 'cases',
+            label: 'Cases',
+            sortable: true
+          },
+          {
+            key: 'todayCases',
+            label: 'Today Cases',
+            sortable: true,
+          },
+          {
+            key: 'deaths',
+            label: 'Deaths',
+            sortable: true
+          },
+          {
+            key: 'todayDeaths',
+            label: 'Today Deaths',
+            sortable: true,
+          },
+          {
+            key: 'recovered',
+            label: 'Recovered',
+            sortable: true
+          },
+          {
+            key: 'active',
+            label: 'Active',
+            sortable: true
+          },
+          {
+            key: 'critical',
+            label: 'Critical',
+            sortable: true,
+          },
+          {
+            key: 'casesPerOneMillion',
+            label: 'Cases Per One Million',
+            sortable: true
+          },
+          {
+            key: 'deathsPerOneMillion',
+            label: 'Deaths Per One Million',
+            sortable: true,
+          }
+        ],
       totalcount: {},
       critical: 0,
       mild: 0
     }
   },
   created () {
+    this.setIsLoader(true)
     this.getCompleteData()
     this.getCompleteCount()
     console.log('hahahahah');
@@ -85,6 +141,7 @@ export default {
         .then(response => {
           console.log('post', response.data)
           this.totalcount = response.data
+          this.setIsLoader(false)
         })
         .catch(error => {
           console.log(error)
@@ -105,8 +162,17 @@ export default {
           for(var i=0; i<response.data.length; i++) {
             delete response.data[i].countryInfo
             this.critical += response.data[i].critical
+            response.data[i]["_cellVariants"] = {}
+            if (response.data[i].todayCases > 0) {
+              response.data[i]["_cellVariants"]["todayCases"] = "danger";
+            }
+            if (response.data[i].todayDeaths > 0) {
+              response.data[i]["_cellVariants"]["todayDeaths"] = "danger";
+            }
           }
           this.items = response.data
+          console.log('this.items', this.items)
+          this.setIsLoader(false)
         })
         .catch(error => {
           console.log(error)
@@ -118,7 +184,34 @@ export default {
           }
           this.isError = true
         })
-    }
+    },
+    ...mapActions([
+      'setUserDetails',
+      'setIsLoader'
+    ])
   }
 }
 </script>
+<style>
+tr {
+  cursor: pointer;
+}
+.tableCard {
+  height: 100vh;
+  overflow: auto;
+}
+.customCard .card-body {
+  padding-top: 0 !important;
+}
+th {
+  background-color: white;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 2;
+}
+.card-header {
+  font-weight: 700;
+  font-size: larger;
+}
+</style>
