@@ -35,8 +35,8 @@ let router = new Router({
           component: Dashboard
         },
         {
-          path: 'users',
-          name: 'Users',
+          path: '/country/:countryName',
+          name: 'country',
           meta: {
             isAuthenticate: false
           },
